@@ -117,6 +117,12 @@ def main():
         file.write(f",,{temp_end}\n")
 
     print("Data collection complete.")
+    
+    second_column = [row[1] for row in data]
+    min_value = min(second_column)
+    max_value = max(second_column)
+    fv_fm = (max_value-min_value)/max_value
+    print("fv/fm:",fv_fm)
 
 if __name__ == "__main__":
     main()
